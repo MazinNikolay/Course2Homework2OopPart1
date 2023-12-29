@@ -43,4 +43,35 @@ public abstract class Ravenclaw extends Hogwarts {
     public void setCreation(int creation) {
         this.creation = creation;
     }
+
+    public void printCharacteristics() {
+        System.out.println(this.getName() + ", Сила магии - " + this.getMagicPower()
+                + ", Расстояние трансгрессии - " + this.getTransgressDistance()
+                + ", Ум - " + mind
+                + ", Мудрость - " + wisdom
+                + ", Остороумие - " + wit
+                + ", Творчество - " + creation);
+    }
+
+    public String compareCharacteristic(StudentRavenclaw compareStudent) {
+        int firstStudentCharacteristic = this.getMagicPower()
+                + this.getTransgressDistance()
+                + mind
+                + wisdom
+                + wit
+                + creation;
+        int secondStudentCharacteristic = compareStudent.getMagicPower()
+                + compareStudent.getTransgressDistance()
+                + compareStudent.getMind()
+                + compareStudent.getWisdom()
+                + compareStudent.getWit()
+                + compareStudent.getCreation();
+        if (firstStudentCharacteristic > secondStudentCharacteristic) {
+            return this.getName() + " лучший Когтевранец, чем " + compareStudent.getName();
+        } else if (firstStudentCharacteristic < secondStudentCharacteristic) {
+            return compareStudent.getName() + " лучший Когтевранец, чем " + this.getName();
+        } else {
+            return "Характеристики равны";
+        }
+    }
 }

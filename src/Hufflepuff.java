@@ -33,4 +33,32 @@ public abstract class Hufflepuff extends Hogwarts {
     public int getHonesty() {
         return honesty;
     }
+
+    public void printCharacteristics() {
+        System.out.println(this.getName() + ", Сила магии - " + this.getMagicPower()
+                + ", Расстояние трансгрессии - " + this.getTransgressDistance()
+                + ", Трудолюбие - " + hardWork
+                + ", Верность - " + loyalty
+                + ", Честность - " + honesty);
+    }
+
+    public String compareCharacteristic(StudentHufflepuff compareStudent) {
+        int firstStudentCharacteristic = this.getMagicPower()
+                + this.getTransgressDistance()
+                + hardWork
+                + loyalty
+                + honesty;
+        int secondStudentCharacteristic = compareStudent.getMagicPower()
+                + compareStudent.getTransgressDistance()
+                + compareStudent.getHardWork()
+                + compareStudent.getLoyalty()
+                + compareStudent.getHonesty();
+        if (firstStudentCharacteristic > secondStudentCharacteristic) {
+            return this.getName() + " лучший Пуффендуец, чем " + compareStudent.getName();
+        } else if (firstStudentCharacteristic < secondStudentCharacteristic) {
+            return compareStudent.getName() + " лучший Пуффендуец, чем " + this.getName();
+        } else {
+            return "Характеристики равны";
+        }
+    }
 }

@@ -24,4 +24,22 @@ public abstract class Hogwarts {
     }
 
     public abstract String getName();
+
+    public String compareTransgressDistance(Hogwarts compareStudent) {
+        if (this.getTransgressDistance() > compareStudent.getTransgressDistance()) {
+            return this.getName() + " обладает бОльшей дальностью трансгрессии, чем " + compareStudent.getName();
+        } else if (this.getTransgressDistance() < compareStudent.getTransgressDistance()) {
+            return compareStudent.getName() + " обладает бОльшей дальностью трансгрессии, чем " + this.getName();
+        } else return "Дальность трансгресии студентов одинакова";
+    }
+
+    public String compareMagicPower(Hogwarts compareStudent) {
+        if (this.getMagicPower() > compareStudent.getMagicPower()) {
+            return this.getName() + " обладает бОльшей мощностью магии, чем " + compareStudent.getName();
+        } else if (this.getMagicPower() < compareStudent.getMagicPower()) {
+            return compareStudent.getName() + " обладает бОльшей мощностью магии, чем " + this.getName();
+        } else {
+            return "Мощность магии студентов одинакова";
+        }
+    }
 }

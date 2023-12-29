@@ -33,4 +33,32 @@ public abstract class Gryffindor extends Hogwarts {
     public int getBrave() {
         return brave;
     }
+
+    public void printCharacteristics() {
+        System.out.println(this.getName() + ", Сила магии - " + this.getMagicPower()
+                + ", Расстояние трансгрессии - " + this.getTransgressDistance()
+                + ", Благородство - " + nobility
+                + ", Честь - " + honor
+                + ", Храбрость - " + brave);
+    }
+
+    public String compareCharacteristic(StudentGryffindor compareStudent) {
+        int firstStudentCharacteristic = this.getMagicPower()
+                + this.getTransgressDistance()
+                + nobility
+                + honor
+                + brave;
+        int secondStudentCharacteristic = compareStudent.getMagicPower()
+                + compareStudent.getTransgressDistance()
+                + compareStudent.getNobility()
+                + compareStudent.getHonor()
+                + compareStudent.getBrave();
+        if (firstStudentCharacteristic > secondStudentCharacteristic) {
+            return this.getName() + " лучший Гриффиндорец, чем " + compareStudent.getName();
+        } else if (firstStudentCharacteristic < secondStudentCharacteristic) {
+            return compareStudent.getName() + " лучший Гриффиндорец, чем " + this.getName();
+        } else {
+            return "Характеристики равны";
+        }
+    }
 }
