@@ -40,4 +40,16 @@ public class StudentHufflepuff extends Hufflepuff {
                 this.getName() + " лучший Пуффендуец, чем " + compareStudent.getName()
                 : compareStudent.getName() + " лучший Пуффендуец, чем " + this.getName();
     }
+
+    public String compareTransgressDistance(Hogwarts compareStudent) {
+        return this.getTransgressDistance() > compareStudent.getTransgressDistance() ?
+                this.getName() + " обладает бОльшей дальностью трансгрессии, чем " + compareStudent.getName() :
+                compareStudent.getName() + " обладает бОльшей дальностью трансгрессии, чем " + this.getName();
+    }
+
+    public String compareMagicPower(Hogwarts compareStudent) {
+        return this.getMagicPower() > compareStudent.getMagicPower() ?
+                this.getName() + " обладает бОльшей мощностью магии, чем " + compareStudent.getName() :
+                compareStudent.getName() + " обладает бОльшей мощностью магии, чем " + this.getName();
+    }
 }

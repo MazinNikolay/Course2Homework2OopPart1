@@ -18,19 +18,8 @@ public class HogwartsApp {
         System.out.println(harryPotter.compareCharacteristic(hermioneGranger));
         System.out.println(cedricDiggory.compareCharacteristic(justinFinchFletchley));
         System.out.println(marcusBelby.compareCharacteristic(choChang));
-        System.out.println(compareMagicPower(harryPotter, padmaPatil));
-        System.out.println(compareMagicPower(zachariasSmith, grahamMotague));
-        System.out.println(compareTransgressDistance(hermioneGranger, cedricDiggory));
-    }
-
-    public static String compareMagicPower(Hogwarts firstStudent, Hogwarts secondStudent) {
-        return firstStudent.getMagicPower() > secondStudent.getMagicPower() ?
-                firstStudent + " обладает бОльшей мощностью магии, чем " + secondStudent :
-                secondStudent + " обладает бОльшей мощностью магии, чем " + firstStudent;
-    }
-    public static String compareTransgressDistance(Hogwarts firstStudent, Hogwarts secondStudent) {
-        return firstStudent.getTransgressDistance() > secondStudent.getTransgressDistance() ?
-                firstStudent + " обладает бОльшей дальностью трансгрессии, чем " + secondStudent :
-                secondStudent + " обладает бОльшей дальностью трансгрессии, чем " + firstStudent;
+        System.out.println(harryPotter.compareMagicPower(padmaPatil));
+        System.out.println(zachariasSmith.compareMagicPower(grahamMotague));
+        System.out.println(hermioneGranger.compareTransgressDistance(cedricDiggory));
     }
 }

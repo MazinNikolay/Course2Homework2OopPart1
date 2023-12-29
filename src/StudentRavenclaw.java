@@ -43,4 +43,16 @@ public class StudentRavenclaw extends Ravenclaw {
                 this.getName() + " лучший Когтевранец, чем " + compareStudent.getName()
                 : compareStudent.getName() + " лучший Когтевранец, чем " + this.getName();
     }
+
+    public String compareTransgressDistance(Hogwarts compareStudent) {
+        return this.getTransgressDistance() > compareStudent.getTransgressDistance() ?
+                this.getName() + " обладает бОльшей дальностью трансгрессии, чем " + compareStudent.getName() :
+                compareStudent.getName() + " обладает бОльшей дальностью трансгрессии, чем " + this.getName();
+    }
+
+    public String compareMagicPower(Hogwarts compareStudent) {
+        return this.getMagicPower() > compareStudent.getMagicPower() ?
+                this.getName() + " обладает бОльшей мощностью магии, чем " + compareStudent.getName() :
+                compareStudent.getName() + " обладает бОльшей мощностью магии, чем " + this.getName();
+    }
 }

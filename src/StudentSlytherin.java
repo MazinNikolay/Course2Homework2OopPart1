@@ -47,4 +47,16 @@ public class StudentSlytherin extends Slytherin {
                 this.getName() + " лучший Слизеринец, чем " + compareStudent.getName()
                 : compareStudent.getName() + " лучший Слизеринец, чем " + this.getName();
     }
+
+    public String compareTransgressDistance(Hogwarts compareStudent) {
+        return this.getTransgressDistance() > compareStudent.getTransgressDistance() ?
+                this.getName() + " обладает бОльшей дальностью трансгрессии, чем " + compareStudent.getName() :
+                compareStudent.getName() + " обладает бОльшей дальностью трансгрессии, чем " + this.getName();
+    }
+
+    public String compareMagicPower(Hogwarts compareStudent) {
+        return this.getMagicPower() > compareStudent.getMagicPower() ?
+                this.getName() + " обладает бОльшей мощностью магии, чем " + compareStudent.getName() :
+                compareStudent.getName() + " обладает бОльшей мощностью магии, чем " + this.getName();
+    }
 }

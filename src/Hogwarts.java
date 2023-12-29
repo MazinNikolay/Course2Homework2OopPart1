@@ -22,4 +22,6 @@ public abstract class Hogwarts {
     public void setTransgressDistance(int transgressDistance) {
         this.transgressDistance = transgressDistance;
     }
+
+    public abstract String getName();
 }
